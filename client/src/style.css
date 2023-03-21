@@ -14,10 +14,24 @@
   
   .navbar {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 80px;
     align-items: center;
-    height: 40px;
-    background-color: #3339;
+    height: 200px;
+    background-color: transparent;
+  }
+
+  
+    .logout-btn {
+      background-color: transparent;
+      border: none;
+    }
+
+  .svg-inline--fa  {
+    display: var(--fa-display, inline-block);
+    color: rgb(0, 28, 28);
+    height: 30px;
   }
 
   .public {

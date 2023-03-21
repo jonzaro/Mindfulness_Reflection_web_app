@@ -26,26 +26,19 @@ export default function ReflectionForm(props){
 
   const { title, description, imgUrl } = inputs
   return (
-    <form onSubmit={handleSubmit}>
-      <input 
-        type="text" 
-        name="title" 
-        value={title} 
-        onChange={handleChange} 
-        placeholder="Title"/>
-      <input 
-        type="text" 
-        name="description" 
-        value={description} 
-        onChange={handleChange} 
-        placeholder="Description"/>
-      <input 
-        type="text" 
-        name="imgUrl" 
-        value={imgUrl} 
-        onChange={handleChange} 
-        placeholder="Image Url"/>
-      <button>Record Task</button>
-    </form>
+    <>
+      <h3>Take a moment to write your thoughts about this quote.</h3>
+      <form onSubmit={handleSubmit}>
+        
+        <input 
+          type="text" 
+          name="description" 
+          value={description} 
+          onChange={handleChange} 
+          placeholder="Description"/>
+        
+        <button>Save Reflection</button>
+      </form>
+    </>
   )
 }
