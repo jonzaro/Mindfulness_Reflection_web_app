@@ -27,7 +27,6 @@ export default function ReflectionForm(props){
   const { title, description, imgUrl } = inputs
   return (
     <>
-      <h3>Take a moment to write your thoughts about this quote.</h3>
       <form onSubmit={handleSubmit}>
         
         <input 
