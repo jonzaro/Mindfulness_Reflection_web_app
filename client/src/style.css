@@ -36,10 +36,10 @@
   }
 
   
-    .logout-btn {
-      background-color: transparent;
-      border: none;
-    }
+  .logout-btn {
+    background-color: transparent;
+    border: none;
+  }
 
   .svg-inline--fa  {
     display: var(--fa-display, inline-block);
@@ -110,7 +110,50 @@
   
   .profile {
     font-family: "myFontReg";
+  }
 
+  .pick-quote-button {
+    position: relative;
+    left: 500px;
+    height: 40px;
+    width: 200px;
+    padding:5px;
+    margin-top:30px;
+    border-radius: 20px;
+    color: white;
+    background: black;
+  }
+
+  .quote-container {
+    display: block;
+    background-color:rgba(000, 000, 0, .2);
+    width: 1000px;
+    height: 800px;
+    padding: 70px;
+    border-radius: 20px;
+  }
+  
+  .quote-content {
+    opacity: 1;
+    font-size: 30px;
+    font: black;
+  }
+
+  .blinking-text {
+    animation: blinker 2s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .next-quote {
+    position: relative;
+    display: inline;
+    top: -180px;
+    left: 450px;
   }
 
   .profile-btn {

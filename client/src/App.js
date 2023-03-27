@@ -4,6 +4,7 @@ import Navbar from './components/Navbar.js'
 import Auth from './components/Auth.js'
 import Profile from './components/Profile.js'
 import Public from './components/Public.js'
+import QuotePage from './components/QuotePage.js'
 import ProtectedRoute from './components/ProtectedRoute.js'
 import { UserContext } from './context/UserProvider.js'
 import './style.css'
@@ -27,6 +28,12 @@ export default function App(){
           path="/public"
           element={<ProtectedRoute token={token} redirectTo="/"> 
           <Public />
+        </ProtectedRoute> } />
+
+        <Route 
+          path="/quotepage"
+          element={<ProtectedRoute token={token} redirectTo="/">
+            <QuotePage />
         </ProtectedRoute> } />
       </Routes>
     </div>
