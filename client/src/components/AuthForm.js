@@ -13,7 +13,7 @@ export default function AuthForm(props){
   } = props
   
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="login-form" onSubmit={handleSubmit}>
       Username:
       <input 
         type="text" 

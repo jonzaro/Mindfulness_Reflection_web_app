@@ -112,34 +112,77 @@
     font-family: "myFontReg";
   }
 
-  .pick-quote-button {
-    position: relative;
-    left: 500px;
-    height: 40px;
-    width: 200px;
-    padding:5px;
-    margin-top:30px;
-    border-radius: 20px;
-    color: white;
-    background: black;
+  
+  .quote-img-container {
+    width: 100%;
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 50px;
+    background-image: url("../public/quotepage.jpg");
   }
-
+  
   .quote-container {
     display: block;
-    background-color:rgba(000, 000, 0, .2);
+    overflow: hidden;
+    background-color:rgba(165, 165, 165, 0.2);
     width: 1000px;
-    height: 800px;
-    padding: 70px;
+    height: 100%;
+    padding: 100px;
+    margin: auto;
     border-radius: 20px;
   }
   
+  .quote {
+    position: relative;
+    top: -100px;
+  }
+
   .quote-content {
-    opacity: 1;
-    font-size: 30px;
-    font: black;
+    opacity: .85;
+    font-size: 38px;
+    margin-top: 0px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .quote-directions {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    left: 520px;
+    top: -80px;
+    padding:20px;
+    font-size: 23px;
+    color:rgb(202, 251, 222)
+  }
+  
+  .pick-quote-button {
+    position: relative;
+    left: 500px;
+    top: -120px;
+    height: 40px;
+    width: 200px;
+    padding:5px;
+    border-radius: 20px;
+    font-size: 16px;
+    color: white;
+    background: rgb(31, 31, 31);
+  }
+
+  .next-quote {
+    position: relative;
+    top: -150px;
+    left: 100%;
+    opacity: 1;  
   }
 
   .blinking-text {
+    position: relative;
+    top: -100px;
+    font-family: "myFontReg";
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: white;
     animation: blinker 2s linear infinite;
   }
   
@@ -148,12 +191,11 @@
       opacity: 0;
     }
   }
+  
 
-  .next-quote {
-    position: relative;
-    display: inline;
-    top: -180px;
-    left: 450px;
+  .svg-inline--fa.fa-chevron-right {
+    height: 60px;
+    color: rgb(189, 189, 189);
   }
 
   .profile-btn {
@@ -240,24 +282,27 @@
   }
   
   .auth-container > form {
-    padding: 20px;
+    padding: 30px;
     border-radius: 5px;
     background-color:white;
-  
+    width: 100%;
+    height: 80%;
     display: flex;
+    border: none;
     flex-direction: column;
   }
   
   .auth-container > form > input {
     margin: 16px 8px;
     padding: 8px;
+    width: 100%;
     border: none;
     box-shadow: 1px 1px 10px #c0c0c0;
     border-radius: 15px;
   }
   
   .auth-container > form > button {
-    margin: 16px 8px;
+    align-self: center;
     padding: 8px;
     height: 45px;
     color: white;
@@ -265,12 +310,43 @@
     border-radius: 10px;
   }
   
-  .reflection-list {
+  form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 540px;
+    margin:  0;
+    border: 3px solid #3339;
+    background-color: #aaa9;
+    padding: 16px;
+    border-radius: 5px
+  }
   
+  form > input {
+    height: 100px;
+    width: 500px;
+    margin: 16px 8px;
+    padding: 8px;
+    border: none;
+    box-shadow: 1px 1px 10px #c0c0c0;
+    border-radius: 3px;
+  }
+
+  form > button {
+    padding:5px;
+    width: 240px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: white;
+    background: rgb(41, 60, 46);
+  }
+  .reflection-list {
+    
   }
   
   .reflection {
-  
+    position: relative;
+    top: -100px;
   }
   
   .public {
@@ -305,9 +381,3 @@
     border-radius: 5px
   }
   
-  .profile > form > input,
-  .profile > form > button {
-    margin: 8px 0;
-    padding: 8px;
-    border-radius: 5px
-  }
