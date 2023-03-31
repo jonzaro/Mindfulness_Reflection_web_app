@@ -14,14 +14,14 @@ export default function AuthForm(props){
   
   return (
     <form className="login-form" onSubmit={handleSubmit}>
-      Username:
+      <h2>Welcome Home.</h2>
+
       <input 
         type="text" 
         value={username} 
         name="username" 
         onChange={handleChange} 
         placeholder="Enter your username"/>
-      Password:
       <input 
         type="text" 
         value={password} 

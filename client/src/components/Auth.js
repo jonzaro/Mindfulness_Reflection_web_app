@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react'
 import AuthForm from './AuthForm.js'
 import { UserContext } from '../context/UserProvider.js'
+import picSvg from './Diary.gif'
 
 const initInputs = { username: "", password: "" }
 
@@ -36,10 +37,15 @@ const { signup, login, errMsg, resetAuthErr } = useContext(UserContext)
 
   return (
     <>
+
     <div className="flex-container">
-      <div className="img-container"></div>
+      <div className="img-container">
+        <img src={picSvg} alt="diary" /><br></br>
+        <a href="https://storyset.com/people" style={{color: "gray"}}>People illustrations by Storyset</a>
+        
+        <p className="site-name">Stillness <br></br>Starts <br></br>Here</p>
+        </div>
       <div className="auth-container">
-        <h2>Welcome Home</h2>
 
         { !toggle ?
           <>

@@ -8,7 +8,7 @@ const initInputs = {
 }
 
 export default function ReflectionForm(props){
-  
+
   const [inputs, setInputs] = useState(initInputs)
   const { addReflection } = props
 
@@ -39,7 +39,7 @@ export default function ReflectionForm(props){
           name="description" 
           value={description} 
           onChange={handleChange} 
-          placeholder="Description"/>
+          placeholder="Write your thoughts here"/>
         
         <button>Save Reflection</button>
       </form>

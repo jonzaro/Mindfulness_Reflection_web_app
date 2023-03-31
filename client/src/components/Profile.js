@@ -28,7 +28,6 @@ export default function Profile(){
       
       <h3> RENDER REFLECTIONS</h3>
       <ReflectionList reflections={reflections}/>
-{/* MAP OF DIVS WITH UNSPLASH IMAGES IS NOT RENDERING IN REFLECTION LIST */}
     </div> : 
       
 

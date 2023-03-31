@@ -10,6 +10,16 @@ export default function QuotePage() {
 
     const [quotes, setQuotes] = useState([])
     const [showPrompt, setShowPrompt] = useState(false);
+    const [showForm, setShowForm] = useState(false);
+    
+    
+    
+    const triggerForm = () => {
+        setTimeout(() => setShowForm(true), 1500);
+    }
+
+    
+
     
     const { 
         user: {username }, 
@@ -37,6 +47,7 @@ function nextQuote(){
 
 const handleShowPrompt = () => {
     setShowPrompt(true);
+    triggerForm();
 };
 
     return (
@@ -47,7 +58,8 @@ const handleShowPrompt = () => {
                     <h1>Welcome {username}!</h1>
                     
                     <div className="quote-directions">
-                        Find a quote that resonates with you, select it, ponder it, then write about it.
+                        Find a quote that resonates with you, select it, ponder it, 
+                        then write about it.
                     </div>
                     <div className="quote">
                         <h2 style={{display: "inline"}}>"</h2>  
@@ -57,14 +69,15 @@ const handleShowPrompt = () => {
                     <div className="next-quote">        
                         <FontAwesomeIcon  icon={faChevronRight} onClick={nextQuote}/>
                     </div>
-                </div>
                 <button className="pick-quote-button" onClick={handleShowPrompt}>I like this quote</button>
-                {showPrompt && <div className="blinking-text">Take a few moments to reflect on this quote...</div>}
-                <div className="reflection">
-                    <ReflectionForm addReflection={addReflection}/>
-
+                </div>
                 </div>
             </div>
+                <div className="quote-prompt">
+                {showPrompt && <div className="blinking-text">Take a few moments to reflect on this quote...</div>}
+                    <div className="reflection">
+                        {showForm === true ? <ReflectionForm addReflection={addReflection} /> : null}
+                    </div>
         </div>
         </>
     )

@@ -7,8 +7,8 @@ export default function ReflectionList(props){
 
 
   const imageUrls = [];
-      for (let i = 1; i <= 100; i++) {
-        const imageUrl = `https://source.unsplash.com/random/800x600?nature${i}.jpg`;
+      for (let i = 1; i <= 10; i++) {
+        const imageUrl = `https://source.unsplash.com/random/800x600?minimal${i}.jpg`;
         imageUrls.push(imageUrl);
       }
   const randomBackground = () => {
@@ -22,7 +22,7 @@ export default function ReflectionList(props){
     return (
       <div className="div-cards">
         {imageUrls.map((imageUrl, index) => (
-          <div key={index} style={randomBackground()}></div>
+          <div key={index}  style={randomBackground()}></div>
         ))}
       </div>
     );
@@ -31,7 +31,7 @@ export default function ReflectionList(props){
   return (
     <div>
       {ImageDivs()}
-      {reflections.map(reflection => <Reflection {...reflection} key={reflection._id}/>)}
+      {reflections.map(reflection => <Reflection {...reflection} key={reflection._id} imgUrl={randomBackground}/>)}
     </div>
     
   
