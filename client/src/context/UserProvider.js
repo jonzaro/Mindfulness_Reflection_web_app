@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 
 export const UserContext = React.createContext()
@@ -13,14 +13,23 @@ userAxios.interceptors.request.use(config => {
 
 export default function UserProvider(props) {
     
+    const [reflections, setReflections] = useState([])
+
+
+    useEffect(() => {
+        getUserReflections()
+    }, []
+    )
     const initState = {
         user: JSON.parse(localStorage.getItem("user")) || {},
         token: localStorage.getItem("token") ||  "",
         reflections: [],
+        quote: [],
         errMsg: ""
     }
 
     const [userState, setUserState] = useState(initState)
+
 
 
     //signup function
@@ -46,12 +55,11 @@ export default function UserProvider(props) {
             const {user, token } = res.data
             localStorage.setItem("token", token)
             localStorage.setItem("user", JSON.stringify(user))
-            getUserReflections() 
             setUserState(prevUserState => ({
-            ...prevUserState,
-            user,
-            token
-        }))
+                ...prevUserState,
+                user,
+                token
+            }))
     })
         
         .catch(err => handleAuthErr(err.response.data.errMsg))
@@ -86,12 +94,15 @@ export default function UserProvider(props) {
 
     //get reflections function
     function getUserReflections() {
-        userAxios.get("/api/reflection/user")
+        userAxios.get("/api/reflection/")
             .then(res => {
-                setUserState(prevState => ({
-                    ...prevState,
-                    reflections: res.data
-                }))
+                setReflections(res.data)
+            //     setUserState(prevState => ({
+                    
+            //         ...prevState,
+            //         reflections: res.data
+            //     }))
+            
             })
             .catch(err => console.log(err.response.data.errMsg))
     }
@@ -104,6 +115,7 @@ export default function UserProvider(props) {
                     ...prevState,
                     reflections: [...prevState.reflections, res.data]
                 }))
+                // const [quoteState, setQuoteState] = useState(savedQuote);
             })
             .catch(err => console.log (err.response.data.errMsg))
     }
@@ -117,7 +129,8 @@ export default function UserProvider(props) {
                 login,
                 logout,
                 addReflection,
-                resetAuthErr
+                resetAuthErr,
+                reflections    
             }}>
             {props.children}
         </UserContext.Provider>

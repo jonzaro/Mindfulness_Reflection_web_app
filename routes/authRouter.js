@@ -1,6 +1,7 @@
 const express = require('express')
 const authRouter = express.Router()
 const User = require('../models/user.js')
+const reflections = require('../models/reflection.js')
 const jwt = require('jsonwebtoken')
 
 // Signup
@@ -42,7 +43,7 @@ authRouter.post("/login", (req, res, next) => {
     user.checkPassword(req.body.password, (err, isMatch) => {
       if (err){
         res.status(403)
-c      }
+      }
       if(!isMatch) {
         res.status(403)
         return next(new Error("Username or Password are incorrect"))
@@ -51,7 +52,7 @@ c      }
       return res.status(200).send({ token, user: user.withoutPassword() })
       }
     )
-  })
+  }).populate('reflections')
 })
 
 

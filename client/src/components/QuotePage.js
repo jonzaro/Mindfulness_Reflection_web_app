@@ -75,8 +75,8 @@ const handleShowPrompt = () => {
             </div>
                 <div className="quote-prompt">
                 {showPrompt && <div className="blinking-text">Take a few moments to reflect on this quote...</div>}
-                    <div className="reflection">
-                        {showForm === true ? <ReflectionForm addReflection={addReflection} /> : null}
+                    <div className="reflection-form">
+                        {showForm === true ? <ReflectionForm addReflection={addReflection} quote={quotes}/> : null}
                     </div>
         </div>
         </>

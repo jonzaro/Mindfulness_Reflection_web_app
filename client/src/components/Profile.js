@@ -11,23 +11,23 @@ export default function Profile(){
   
   const { 
     user: {username }, 
-    reflections
+    reflections,
+    
   } = useContext(UserContext)
   
     const navigate = useNavigate()
-
 
   return (
     
     <>
 
-    { reflections.length > 0 ? 
-
+    { reflections  ? 
+    
     <div className="profile">
       
       
       <h3> RENDER REFLECTIONS</h3>
-      <ReflectionList reflections={reflections}/>
+      <ReflectionList/>
     </div> : 
       
 

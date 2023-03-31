@@ -3,6 +3,12 @@ const Schema = mongoose.Schema
 
 const reflectionSchema = new Schema({
   
+  quote: {
+    
+      type: String,
+    
+  },
+
   description: {
     type: String
   },

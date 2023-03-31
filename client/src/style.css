@@ -409,7 +409,10 @@
   
   .reflection {
     position: relative;
-    top: -30px;
+    top: 30px;
+    width: 300px;
+    height: 150px;
+    background-color: red;
   }
   
   

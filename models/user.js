@@ -13,6 +13,11 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
+  reflections: [{
+    type: Schema.Types.ObjectId,
+    ref: "Reflection"
+    }],
+
   memberSince: {
     type: Date,
     default: Date.now

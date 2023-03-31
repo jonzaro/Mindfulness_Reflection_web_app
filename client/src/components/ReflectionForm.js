@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const initInputs = {
-  title: "",
-  description: "",
-  imgUrl: ""
-}
 
 export default function ReflectionForm(props){
-
+  
+  const initInputs = {
+    title: "",
+    description: "",
+  }
+  const { addReflection, quotes } = props
   const [inputs, setInputs] = useState(initInputs)
-  const { addReflection } = props
 
   const navigate = useNavigate()
 
@@ -24,12 +23,12 @@ export default function ReflectionForm(props){
 
   function handleSubmit(e){
     e.preventDefault()
-    addReflection(inputs)
+    addReflection(inputs, quotes)
     setInputs(initInputs)
     navigate('/profile')
   }
 
-  const { title, description, imgUrl } = inputs
+  const { title, description } = inputs
   return (
     <>
       <form className="form-style" onSubmit={handleSubmit}>
