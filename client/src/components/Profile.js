@@ -24,9 +24,11 @@ export default function Profile(){
     { reflections  ? 
     
     <div className="profile">
-      
-      
-      <h3> RENDER REFLECTIONS</h3>
+      <div className="profile-container">
+        <p className="profile-text">Your favorite quotes and reflections</p>
+      <button className="inspiration-btn-profile" onClick={() => navigate('/quotepage')}>Get Inspiration</button>
+
+      </div>
       <ReflectionList/>
     </div> : 
       

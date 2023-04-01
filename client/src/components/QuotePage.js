@@ -4,45 +4,46 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import {UserContext} from "../context/UserProvider.js"
 import ReflectionForm from './ReflectionForm.js'
 
-
-
 export default function QuotePage() {
 
-    const [quotes, setQuotes] = useState([])
+    // const [quotes, setQuotes] = useState([])
     const [showPrompt, setShowPrompt] = useState(false);
     const [showForm, setShowForm] = useState(false);
     
-    
-    
+
+    //ERROR
+    //WHEN PROMPT BOX APPEARS, IT RERENDERS AND GETS A NEW QUOTE
     const triggerForm = () => {
-        setTimeout(() => setShowForm(true), 1500);
+        setTimeout(() => setShowForm(true), 5000);
     }
 
-    
-
-    
     const { 
         user: {username }, 
         addReflection,
-        reflections
+        reflections,
+        quotes,
+        setQuotes,
+        getRandomQuotes
     } = useContext(UserContext) 
 
 useEffect(() => {
-    fetch('https://api.quotable.io/random')
-    .then(response => response.json())
-    .then(data => {
-    setQuotes(data.content);
-    })
-    .catch(error => console.error(error));
+    getRandomQuotes()
+    // fetch('https://api.quotable.io/random')
+    // .then(response => response.json())
+    // .then(data => {
+    // setQuotes(data.content);
+    // })
+    // .catch(error => console.error(error));
 }, [])
     
 function nextQuote(){
-    fetch('https://api.quotable.io/random')
-    .then(response => response.json())
-    .then(data => {
-    setQuotes(data.content);
-    })
-    .catch(error => console.error(error));
+    getRandomQuotes()
+    // fetch('https://api.quotable.io/random')
+    // .then(response => response.json())
+    // .then(data => {
+    // setQuotes(data.content);
+    // })
+    // .catch(error => console.error(error));
 }
 
 const handleShowPrompt = () => {
@@ -76,7 +77,7 @@ const handleShowPrompt = () => {
                 <div className="quote-prompt">
                 {showPrompt && <div className="blinking-text">Take a few moments to reflect on this quote...</div>}
                     <div className="reflection-form">
-                        {showForm === true ? <ReflectionForm addReflection={addReflection} quote={quotes}/> : null}
+                        {showForm === true ? <ReflectionForm addReflection={addReflection} quotes={quotes} setQuotes={setQuotes} /> : null}
                     </div>
         </div>
         </>

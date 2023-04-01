@@ -116,6 +116,19 @@
     background: black;
   }
 
+  .inspiration-btn-profile {
+    position: relative;
+    top: 30px;
+    left: 600px;
+    height: 40px;
+    width: 300px;
+    padding:5px;
+    font-size: medium;
+    border-radius: 20px;
+    color: white;
+    background: black;
+  }
+
   .inspiration-btn {
     position: relative;
     top: 30px;
@@ -311,7 +324,7 @@
     border-radius: 15px;
     padding: 15px;
     top: -160px;
-    left: 75%;
+    left: 65%;
     height: 400px;
     width: 300px;
   }
@@ -403,19 +416,74 @@
     color: white;
     background: rgb(41, 60, 46);
   }
-  .reflection-list {
+
+  .profile-container {
+    display: block;
+    margin-top: 30px;
+
+  }
+
+  .profile-text {
+    font-family: "baskerville";
+    font-size: 60px;
+  }
+
+  .reflection-container {
+    background: rgb(226, 228, 238);
+    border-radius: 15px;
+    overflow: scroll;
+    padding: 25px;
+    margin-top: 100px;
+    left: 65%;
+    height: 80%;
+    width: 80%;
     
   }
   
-  .reflection {
+  .reflection-quote {
     position: relative;
     top: 30px;
+    margin-bottom:15px;
     width: 300px;
     height: 150px;
-    background-color: red;
+    padding-right: 10px;
+    padding: 10px;
+    border-radius: 15px;;
+    background: rgb(226, 228, 238);
+  }
+ 
+  .reflection-overlay {
+    display: block;
+    overflow: hidden;
+    background-color:rgba(215, 206, 206, 0.4);
+    width: 95%;
+    height: 100%;
+    padding: 20px;
+    margin: auto;
+    border-radius: 20px;
   }
   
+  .reflection-text {
   
+    position: relative;
+    width: 30vw;
+    height: 75%;
+    top: -180px;
+    left: 630px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding-right: 15px;
+    margin-bottom: 25px;
+    background: rgb(226, 228, 238);
+    ;
+    
+  }
+
+  .bookmark {
+    display: block;
+    position: relative;
+    left: 80%;
+  }
   .profile {
     display: flex;
     flex-direction: column;

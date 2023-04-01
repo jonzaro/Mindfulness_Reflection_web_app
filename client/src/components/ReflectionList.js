@@ -31,7 +31,7 @@ export default function ReflectionList(props){
   // };
 console.log(reflections)
   return (
-    <div>
+    <div className="reflection-container">
       {/* {ImageDivs()} */}
       {reflections.map(reflection => <Reflection {...reflection} key={reflection._id} img={imageUrls}/>)}
     </div>

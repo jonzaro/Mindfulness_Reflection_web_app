@@ -40,8 +40,8 @@ reflectionRouter.post("/", (req, res, next) => {
 // Delete Todo
 reflectionRouter.delete("/:reflectionId", (req, res, next) => {
   Todo.findOneAndDelete(
-    { _id: req.params.todoId, user: req.auth._id },
-    (err, deletedTodo) => {
+    { _id: req.params.reflectionId, user: req.auth._id },
+    (err, deletedReflection) => {
       if(err){
         res.status(500)
         return next(err)

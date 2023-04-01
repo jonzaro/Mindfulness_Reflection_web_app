@@ -15,11 +15,10 @@ export default function UserProvider(props) {
     
     const [reflections, setReflections] = useState([])
 
-
     useEffect(() => {
         getUserReflections()
-    }, []
-    )
+    }, [])
+    
     const initState = {
         user: JSON.parse(localStorage.getItem("user")) || {},
         token: localStorage.getItem("token") ||  "",
@@ -29,8 +28,17 @@ export default function UserProvider(props) {
     }
 
     const [userState, setUserState] = useState(initState)
+    const [quotes, setQuotes] = useState([])
 
 
+    function getRandomQuotes() {
+        fetch('https://api.quotable.io/random')
+        .then(response => response.json())
+        .then(data => {
+        setQuotes(data.content);
+        })
+        .catch(error => console.error(error));
+    }
 
     //signup function
     function signup(credentials) {
@@ -115,10 +123,27 @@ export default function UserProvider(props) {
                     ...prevState,
                     reflections: [...prevState.reflections, res.data]
                 }))
-                // const [quoteState, setQuoteState] = useState(savedQuote);
             })
+            
+            .then(() => getUserReflections())
             .catch(err => console.log (err.response.data.errMsg))
     }
+
+    //delete reflections function
+    function deleteReflection(reflectionId) {
+        userAxios.delete(`/api/reflection/${reflectionId}`)
+            .then(res => {
+                setUserState(prevState => ({
+                    ...prevState,
+                    reflections: prevState.reflections.filter(reflection => reflection._id !== reflectionId)
+                    
+                }))
+            })
+            .catch(err => console.log(err.response.data.errMsg))
+    }
+
+
+
 
 
     return (
@@ -129,8 +154,12 @@ export default function UserProvider(props) {
                 login,
                 logout,
                 addReflection,
+                deleteReflection,
                 resetAuthErr,
-                reflections    
+                reflections,
+                getRandomQuotes,
+                setQuotes,
+                quotes
             }}>
             {props.children}
         </UserContext.Provider>

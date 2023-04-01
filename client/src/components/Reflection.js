@@ -1,7 +1,14 @@
-import React from 'react'
+import { React , useContext } from 'react'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBookmark } from "@fortawesome/free-solid-svg-icons";
+import {UserContext} from "../context/UserProvider.js"
 
 export default function Reflection(props){
-  const { reflections, quote, title, description } = props
+  const { quote, description } = props
+
+  const { 
+    deleteReflection,
+} = useContext(UserContext) 
 
 
   const imageUrls = [];
@@ -27,9 +34,22 @@ export default function Reflection(props){
   //   );
   // };
   return (
-    <div className="reflection" style={randomBackground()}>
-      <h1>{quote}</h1>
-      <p>{description}</p>
+    <div className="reflection-div">
+      <div className="reflection-quote" style={randomBackground()}>
+        <div className="reflection-overlay">
+          <h1 style={{display: "inline"}}>"</h1>  
+          <h1>{quote}</h1>
+          <h1 style={{display: "inline"}}>"</h1>  
+
+        </div>
+        <div className="reflection-text">
+        <button className="bookmark" onClick={deleteReflection}><FontAwesomeIcon icon={faBookmark} /></button>
+          <h3>Thoughts & Insights</h3>
+          <br></br>
+          {description}
+
+        </div>  
+      </div>
     </div>
   )
 }
