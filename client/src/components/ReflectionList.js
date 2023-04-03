@@ -20,19 +20,8 @@ export default function ReflectionList(props){
       backgroundImage: `url(${imageUrls[Math.floor(Math.random() * imageUrls.length)]})`,
     };
   };
-  // const ImageDivs = () => {
-  //   return (
-  //     <div className="div-cards">
-  //       {imageUrls.map((imageUrl, index) => (
-  //         <div key={index}  style={randomBackground()}></div>
-  //       ))}
-  //     </div>
-  //   );
-  // };
-console.log(reflections)
   return (
     <div className="reflection-container">
-      {/* {ImageDivs()} */}
       {reflections.map(reflection => <Reflection {...reflection} key={reflection._id} img={imageUrls}/>)}
     </div>
     

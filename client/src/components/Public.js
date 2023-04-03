@@ -1,7 +1,5 @@
 import React from 'react'
-import ReflectionList from './ReflectionList.js'
-import Reflection from './Reflection.js'
-import { Routes, Route, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 

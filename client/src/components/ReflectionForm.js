@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { UserContext } from '../context/UserProvider'
 
@@ -14,17 +14,7 @@ export default function ReflectionForm(props){
   // const { addReflection, quotes, setQuotes } = props
   const [inputs, setInputs] = useState(initInputs)
 
-  const {getRandomQuotes, quotes} = useContext(UserContext)
-
-  useEffect(() => {
-    getRandomQuotes()
-    // fetch('https://api.quotable.io/random')
-    // .then(response => response.json())
-    // .then(data => {
-    // setQuotes(data.content);
-    // })
-    // .catch(error => console.error(error));
-}, [])
+  const {quotes} = useContext(UserContext)
     
   const navigate = useNavigate()
 
@@ -48,7 +38,7 @@ export default function ReflectionForm(props){
     navigate('/profile')
   }
 
-  const { title, description } = inputs
+  const { description } = inputs
   return (
     <>
       <form className="form-style" onSubmit={handleSubmit}>

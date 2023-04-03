@@ -10,7 +10,7 @@ import { UserContext } from './context/UserProvider.js'
 import './style.css'
 
 export default function App(){
-  const { token, logout, user } = useContext(UserContext)
+  const { token, logout } = useContext(UserContext)
   return (
     <div className="app">
       { token && <Navbar logout={logout}/>}

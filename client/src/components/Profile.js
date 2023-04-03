@@ -1,7 +1,6 @@
-import React, { Fragment, useEffect, useContext, useState} from 'react'
+import React, { useContext } from 'react'
 import ReflectionList from './ReflectionList.js'
-import Reflections from './Reflection.js'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import {UserContext} from "../context/UserProvider.js"
 
 

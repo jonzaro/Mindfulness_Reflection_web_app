@@ -6,21 +6,16 @@ import ReflectionForm from './ReflectionForm.js'
 
 export default function QuotePage() {
 
-    // const [quotes, setQuotes] = useState([])
     const [showPrompt, setShowPrompt] = useState(false);
     const [showForm, setShowForm] = useState(false);
-    
 
-    //ERROR
-    //WHEN PROMPT BOX APPEARS, IT RERENDERS AND GETS A NEW QUOTE
     const triggerForm = () => {
-        setTimeout(() => setShowForm(true), 5000);
+        setTimeout(() => setShowForm(true), 10000);
     }
 
     const { 
         user: {username }, 
         addReflection,
-        reflections,
         quotes,
         setQuotes,
         getRandomQuotes
@@ -28,28 +23,16 @@ export default function QuotePage() {
 
 useEffect(() => {
     getRandomQuotes()
-    // fetch('https://api.quotable.io/random')
-    // .then(response => response.json())
-    // .then(data => {
-    // setQuotes(data.content);
-    // })
-    // .catch(error => console.error(error));
 }, [])
     
 function nextQuote(){
     getRandomQuotes()
-    // fetch('https://api.quotable.io/random')
-    // .then(response => response.json())
-    // .then(data => {
-    // setQuotes(data.content);
-    // })
-    // .catch(error => console.error(error));
 }
 
 const handleShowPrompt = () => {
-    setShowPrompt(true);
-    triggerForm();
-};
+    setShowPrompt(true)
+    triggerForm()
+}
 
     return (
         <>
@@ -76,10 +59,10 @@ const handleShowPrompt = () => {
             </div>
                 <div className="quote-prompt">
                 {showPrompt && <div className="blinking-text">Take a few moments to reflect on this quote...</div>}
-                    <div className="reflection-form">
-                        {showForm === true ? <ReflectionForm addReflection={addReflection} quotes={quotes} setQuotes={setQuotes} /> : null}
-                    </div>
-        </div>
+                <div className="reflection-form">
+                    {showForm === true ? <ReflectionForm addReflection={addReflection} quotes={quotes} setQuotes={setQuotes} /> : null}
+                </div>
+            </div>
         </>
     )
 }
