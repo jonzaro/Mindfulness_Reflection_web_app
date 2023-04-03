@@ -1,15 +1,12 @@
 {
-  "homepage": "http://jonzaro.github.io/level6-cap",
   "name": "user-authentication",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "build": "react-scripts build"
+    "start": "node server.js"
+    
 
   },
   "keywords": [],
