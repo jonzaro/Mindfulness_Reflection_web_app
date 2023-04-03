@@ -8,11 +8,30 @@ const {expressjwt} = require('express-jwt')
 app.use(express.json())
 app.use(morgan('dev'))
 
-mongoose.connect(
-'mongodb+srv://reflection:reflectionpass@cluster0.n9rb8od.mongodb.net/test',
+// mongoose.connect(
+// 'mongodb+srv://reflection:reflectionpass@cluster0.n9rb8od.mongodb.net/test',
 
-() => console.log('Connected to the DB')
-)
+// () => console.log('Connected to the DB')
+// )
+
+
+const connectDB = async () => {
+  try {
+    const conn = await mongoose.connect('mongodb+srv://reflection:reflectionpass@cluster0.n9rb8od.mongodb.net/test');
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
+  } catch (error) {
+    console.log(error);
+    process.exit(1);
+  }
+}
+
+connectDB().then(() => {
+  app.listen( () => {
+      console.log("listening for requests");
+  })
+})
+
+
 
 app.use('/auth', require('./routes/authRouter.js'))
 app.use('/api', expressjwt({ secret: process.env.SECRET, algorithms: ['HS256'] })) // req.user
