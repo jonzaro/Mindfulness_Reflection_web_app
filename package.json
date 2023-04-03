@@ -23,5 +23,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.10.3",
     "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
