@@ -1,5 +1,5 @@
 {
-  "homepage": "http://jonzaro.github.io/level6-cap",
+  "homepage": "https://jonzaro.github.io/level6-cap",
   "name": "client",
   "version": "0.1.0",
   "private": true,
@@ -40,5 +40,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:9000"
+  "proxy": "http://localhost:9000",
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
 }
