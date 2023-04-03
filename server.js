@@ -31,19 +31,20 @@ connectDB().then(() => {
   })
 })
 
-
-
-app.use('/auth', require('./routes/authRouter.js'))
-app.use('/api', expressjwt({ secret: process.env.SECRET, algorithms: ['HS256'] })) // req.user
-app.use('/api/reflection', require('./routes/reflectionRouter.js'))
-
-app.use((err, req, res, next) => {
-  console.log(err)
-  if(err.name === "UnauthorizedError"){
-    res.status(err.status)
-  }
-  return res.send({errMsg: err.message})
+app.all('*', (req,res) => {
+  app.use('/auth', require('./routes/authRouter.js'))
+  app.use('/api', expressjwt({ secret: process.env.SECRET, algorithms: ['HS256'] })) // req.user
+  app.use('/api/reflection', require('./routes/reflectionRouter.js'))
+  
+  app.use((err, req, res, next) => {
+    console.log(err)
+    if(err.name === "UnauthorizedError"){
+      res.status(err.status)
+    }
+    return res.send({errMsg: err.message})
+  })
 })
+
 
 app.listen(9000, () => {
   console.log(`Server is running on local port 9000`)
