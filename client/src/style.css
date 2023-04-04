@@ -95,13 +95,27 @@
     background-color: white;
     flex-direction: column;
   }
-
+  
   .public-right-content {
     position: relative;
-    top: 100px;
+    top: 300px;
     font-family: "myFontReg";
     font-size: x-large;
-    }
+  }
+
+  .profile-btn {
+    position: relative;
+    top: 200px;
+    left: -100px;
+    height: 40px;
+    width: 200px;
+    padding:5px;
+    margin-bottom: 100px;
+    font-size:16px;
+    border-radius: 10px;
+    color: white;
+    background: #3164F4;
+  }
 
   .inspiration-profile-btn {
     position: relative;
@@ -132,7 +146,7 @@
   .inspiration-btn {
     position: relative;
     top: 30px;
-    left: 200px;
+    left: 300px;
     height: 40px;
     width: 200px;
     font-size: 16px;
@@ -249,19 +263,6 @@
   }
 
 
-  .profile-btn {
-    position: relative;
-    top: 200px;
-    height: 40px;
-    width: 200px;
-    padding:5px;
-    margin-bottom: 100px;
-    font-size:16px;
-    border-radius: 10px;
-    color: white;
-    background: #3164F4;
-
-  }
 
     .div-cards {
       width: 80%;

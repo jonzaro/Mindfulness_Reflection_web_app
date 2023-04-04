@@ -8,6 +8,7 @@ export default function ReflectionList(props){
     reflections,
     
   } = useContext(UserContext)
+  
   const imageUrls = [];
       for (let i = 1; i <= 10; i++) {
         const imageUrl = `https://source.unsplash.com/random/800x600?minimal${i}.jpg`;

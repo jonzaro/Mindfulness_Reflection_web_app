@@ -4,7 +4,7 @@ import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 import {UserContext} from "../context/UserProvider.js"
 
 export default function Reflection(props){
-  const { quote, description } = props
+  const { quote, description, _id } = props
 
   const { 
     deleteReflection,
@@ -24,15 +24,7 @@ export default function Reflection(props){
       backgroundImage: `url(${imageUrls[Math.floor(Math.random() * imageUrls.length)]})`,
     };
   };
-  // const ImageDivs = () => {
-  //   return (
-  //     <div className="div-cards">
-  //       {imageUrls.map((imageUrl, index) => (
-  //         <div key={index}  style={randomBackground()}></div>
-  //       ))}
-  //     </div>
-  //   );
-  // };
+  
   return (
     <div className="reflection-div">
       <div className="reflection-quote" style={randomBackground()}>
@@ -43,7 +35,7 @@ export default function Reflection(props){
 
         </div>
         <div className="reflection-text">
-        <button className="bookmark" onClick={deleteReflection}><FontAwesomeIcon icon={faBookmark} /></button>
+        <button className="bookmark" onClick={() => deleteReflection(_id)}><FontAwesomeIcon icon={faBookmark} /></button>
           <h3>Thoughts & Insights</h3>
           <br></br>
           {description}

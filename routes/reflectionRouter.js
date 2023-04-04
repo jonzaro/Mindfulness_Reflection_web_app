@@ -37,21 +37,21 @@ reflectionRouter.post("/", (req, res, next) => {
   })
 })
 
-// Delete Todo
+// Delete reflection
 reflectionRouter.delete("/:reflectionId", (req, res, next) => {
-  Todo.findOneAndDelete(
+  Reflection.findOneAndDelete(
     { _id: req.params.reflectionId, user: req.auth._id },
     (err, deletedReflection) => {
       if(err){
         res.status(500)
         return next(err)
       }
-      return res.status(200).send(`Successfully delete reflection: ${deletedReflection.title}`)
+      return res.status(200).send(`Successfully delete reflection: ${deletedReflection._id}`)
     }
   )
 })
 
-// Update Todo
+// Update reflection
 reflectionRouter.put("/:reflectionId", (req, res, next) => {
   Reflection.findOneAndUpdate(
     { _id: req.params.todoId, user: req.auth._id },

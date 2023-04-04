@@ -24,6 +24,7 @@ export default function Profile(){
     
     <div className="profile">
       <div className="profile-container">
+        <h1>Hello {username}</h1>
         <p className="profile-text">Your favorite quotes and reflections</p>
       <button className="inspiration-btn-profile" onClick={() => navigate('/quotepage')}>Get Inspiration</button>
 

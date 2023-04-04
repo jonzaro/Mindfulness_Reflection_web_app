@@ -102,7 +102,7 @@ export default function UserProvider(props) {
 
     //get reflections function
     function getUserReflections() {
-        userAxios.get("/api/reflection/")
+        userAxios.get("/api/reflection/user")
             .then(res => {
                 setReflections(res.data)
             //     setUserState(prevState => ({
@@ -131,14 +131,13 @@ export default function UserProvider(props) {
 
     //delete reflections function
     function deleteReflection(reflectionId) {
+        console.log('Deleting reflection with ID:', reflectionId);
+
         userAxios.delete(`/api/reflection/${reflectionId}`)
             .then(res => {
-                setUserState(prevState => ({
-                    ...prevState,
-                    reflections: prevState.reflections.filter(reflection => reflection._id !== reflectionId)
-                    
-                }))
-            })
+                setReflections(prevState => prevState.filter(reflection => reflection._id !== reflectionId
+            ))})
+
             .catch(err => console.log(err.response.data.errMsg))
     }
 
