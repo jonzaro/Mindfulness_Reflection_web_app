@@ -98,7 +98,7 @@
 
   .public-right-content {
     position: relative;
-    top: 300px;
+    top: 100px;
     font-family: "myFontReg";
     font-size: x-large;
     }
@@ -251,8 +251,7 @@
 
   .profile-btn {
     position: relative;
-    top: 300px;
-    left: -100px;
+    top: 200px;
     height: 40px;
     width: 200px;
     padding:5px;
