@@ -15,9 +15,9 @@ export default function UserProvider(props) {
     
     const [reflections, setReflections] = useState([])
 
-    useEffect(() => {
-        getUserReflections()
-    }, [])
+    // useEffect(() => {
+    //     getUserReflections()
+    // }, [])
     
     const initState = {
         user: JSON.parse(localStorage.getItem("user")) || {},
@@ -100,7 +100,7 @@ export default function UserProvider(props) {
         }))
     }
 
-    //get reflections function
+    //get reflections by user function
     function getUserReflections() {
         userAxios.get("/api/reflection/user")
             .then(res => {
@@ -156,6 +156,7 @@ export default function UserProvider(props) {
                 deleteReflection,
                 resetAuthErr,
                 reflections,
+                getUserReflections,
                 getRandomQuotes,
                 setQuotes,
                 quotes

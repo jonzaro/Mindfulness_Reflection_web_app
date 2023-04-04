@@ -13,8 +13,9 @@ reflectionRouter.get("/", (req, res, next) => {
   })
 })
 
-// Get todos by user id
+// Get reflections by user id
 reflectionRouter.get("/user", (req, res, next) => {
+  console.log("getting refleciton by user")
   Reflection.find({ user: req.auth._id }, (err, reflections) => {
     if(err){
       res.status(500)

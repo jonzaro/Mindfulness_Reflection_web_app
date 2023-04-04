@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext , useEffect } from 'react'
 import ReflectionList from './ReflectionList.js'
 import { useNavigate } from 'react-router-dom'
 import {UserContext} from "../context/UserProvider.js"
@@ -7,10 +7,14 @@ import {UserContext} from "../context/UserProvider.js"
 
 export default function Profile(){
   
+  useEffect(() => {
+    getUserReflections()
+}, [])
   
   const { 
     user: {username }, 
     reflections,
+    getUserReflections
     
   } = useContext(UserContext)
   
