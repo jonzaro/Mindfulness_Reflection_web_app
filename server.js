@@ -22,7 +22,7 @@ MONGO_URI = "mongodb+srv://reflection:reflectionpass@cluster0.n9rb8od.mongodb.ne
 //process.env.MONGO_URI//
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URI)
+    const conn = await mongoose.connect("mongodb+srv://reflection:reflectionpass@cluster0.n9rb8od.mongodb.net/test")
     console.log(`MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {
     console.log(error);
