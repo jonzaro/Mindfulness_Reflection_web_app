@@ -25,7 +25,7 @@ app.use(favicon(__dirname + '/public/favicon.ico'));
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect("mongodb+srv://reflection:reflectionpass@cluster0.n9rb8od.mongodb.net/test");
+    const conn = await mongoose.connect(process.env.MONGO_URI);
     console.log(`MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {
     console.log(error);
