@@ -30,16 +30,12 @@ const connectDB = async () => {
   }
 }
 
-connectDB().then(() => {
-  app.listen( () => {
-      console.log("listening for requests");
-  })
-})
-app.use('/auth', require('./routes/authRouter.js'))
-app.use('/api', expressjwt({ secret: process.env.SECRET, algorithms: ['HS256'] })) // req.user
-app.use('/api/reflection', require('./routes/reflectionRouter.js'))
-
 app.all('*', (req,res) => {
+  
+  
+  app.use('/auth', require('./routes/authRouter.js'))
+  app.use('/api', expressjwt({ secret: process.env.SECRET, algorithms: ['HS256'] })) // req.user
+  app.use('/api/reflection', require('./routes/reflectionRouter.js'))
   
   app.use((err, req, res, next) => {
     console.log(err)
@@ -50,6 +46,11 @@ app.all('*', (req,res) => {
   })
 })
 
+connectDB().then(() => {
+  app.listen( () => {
+      console.log("listening for requests");
+  })
+})
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
