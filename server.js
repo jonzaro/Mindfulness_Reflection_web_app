@@ -3,7 +3,6 @@ const express = require('express')
 const path = require("path")
 
 const app = express()
-const favicon = require('express-favicon');
 const morgan = require('morgan')
 const mongoose = require('mongoose')
 const {expressjwt} = require('express-jwt')
@@ -11,7 +10,6 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json())
 app.use(morgan('dev'))
-app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(express.static(path.join(__dirname, "client", "build")))
 
 
