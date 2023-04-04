@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.62a05169.css",
+    "main.js": "/static/js/main.a4a6cb94.js",
+    "static/media/landing-water.jpg": "/static/media/landing-water.999ae89a5fded3ae197f.jpg",
+    "static/media/profile-empty.jpg": "/static/media/profile-empty.f4345902290d6f7ddb76.jpg",
+    "static/media/quotepage.jpg": "/static/media/quotepage.14c9224cc9037ba50d6a.jpg",
+    "static/media/Diary.gif": "/static/media/Diary.0ad1e33aadc0d52dd1a5.gif",
+    "static/media/RobotoCondensed-Regular.ttf": "/static/media/RobotoCondensed-Regular.fc3d2f2e3a203d0037c1.ttf",
+    "static/media/RobotoCondensed-Bold.ttf": "/static/media/RobotoCondensed-Bold.c5fe6deebafaec078e64.ttf",
+    "static/media/BaskervvilleRegular.ttf": "/static/media/BaskervvilleRegular.fbfdbd5a668fb566697a.ttf",
+    "index.html": "/index.html",
+    "main.62a05169.css.map": "/static/css/main.62a05169.css.map",
+    "main.a4a6cb94.js.map": "/static/js/main.a4a6cb94.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.62a05169.css",
+    "static/js/main.a4a6cb94.js"
+  ]
+}
