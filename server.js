@@ -30,12 +30,12 @@ const connectDB = async () => {
   }
 }
 
+
+app.use('/auth', require('./routes/authRouter.js'))
+app.use('/api', expressjwt({ secret: process.env.SECRET, algorithms: ['HS256'] })) // req.user
+app.use('/api/reflection', require('./routes/reflectionRouter.js'))
+
 app.all('*', (req,res) => {
-  
-  
-  app.use('/auth', require('./routes/authRouter.js'))
-  app.use('/api', expressjwt({ secret: process.env.SECRET, algorithms: ['HS256'] })) // req.user
-  app.use('/api/reflection', require('./routes/reflectionRouter.js'))
   
   app.use((err, req, res, next) => {
     console.log(err)
