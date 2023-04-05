@@ -56,7 +56,7 @@ npm run test
 👤 **Jon Zaro**
 
 * Github: [@jonzaro](https://github.com/jonzaro)
-* LinkedIn: [@Jon Zaro](https://linkedin.com/in/Jon Zaro)
+* LinkedIn: [@Jon Zaro](https://linkedin.com/in/jonzaro)
 
 ## Show your support
 
