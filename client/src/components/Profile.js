@@ -24,7 +24,7 @@ export default function Profile(){
     
     <>
 
-    { reflections  ? 
+    { reflections.length > 0  ? 
     
     <div className="profile">
       <div className="profile-container">

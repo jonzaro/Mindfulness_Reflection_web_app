@@ -1,6 +1,6 @@
 import { React , useContext } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookmark } from "@fortawesome/free-solid-svg-icons";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import {UserContext} from "../context/UserProvider.js"
 
 export default function Reflection(props){
@@ -35,7 +35,7 @@ export default function Reflection(props){
 
         </div>
         <div className="reflection-text">
-        <button className="bookmark" onClick={() => deleteReflection(_id)}><FontAwesomeIcon icon={faBookmark} /></button>
+        <button className="bookmark" onClick={() => deleteReflection(_id)}><FontAwesomeIcon icon={faTrash} /></button>
           <h3>Thoughts & Insights</h3>
           <br></br>
           {description}

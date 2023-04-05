@@ -2,7 +2,7 @@ const express = require("express")
 const reflectionRouter = express.Router()
 const Reflection = require('../models/reflection.js')
 
-// Get All Todos
+// Get all reflections
 reflectionRouter.get("/", (req, res, next) => {
   Reflection.find((err, reflections) => {
     if(err){
@@ -25,7 +25,7 @@ reflectionRouter.get("/user", (req, res, next) => {
   })
 })
 
-// Add new Todo
+// Add new reflection
 reflectionRouter.post("/", (req, res, next) => {
   req.body.user = req.auth._id
   const newReflection = new Reflection(req.body)
@@ -52,7 +52,7 @@ reflectionRouter.delete("/:reflectionId", (req, res, next) => {
   )
 })
 
-// Update reflection
+// NOT IN USE - Update reflection
 reflectionRouter.put("/:reflectionId", (req, res, next) => {
   Reflection.findOneAndUpdate(
     { _id: req.params.todoId, user: req.auth._id },

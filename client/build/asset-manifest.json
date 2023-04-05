@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ed772946.css",
-    "main.js": "/static/js/main.f06e51e8.js",
+    "main.js": "/static/js/main.dbb11c3b.js",
     "static/media/landing-water.jpg": "/static/media/landing-water.999ae89a5fded3ae197f.jpg",
     "static/media/profile-empty.jpg": "/static/media/profile-empty.f4345902290d6f7ddb76.jpg",
     "static/media/quotepage.jpg": "/static/media/quotepage.14c9224cc9037ba50d6a.jpg",
@@ -11,10 +11,10 @@
     "static/media/BaskervvilleRegular.ttf": "/static/media/BaskervvilleRegular.fbfdbd5a668fb566697a.ttf",
     "index.html": "/index.html",
     "main.ed772946.css.map": "/static/css/main.ed772946.css.map",
-    "main.f06e51e8.js.map": "/static/js/main.f06e51e8.js.map"
+    "main.dbb11c3b.js.map": "/static/js/main.dbb11c3b.js.map"
   },
   "entrypoints": [
     "static/css/main.ed772946.css",
-    "static/js/main.f06e51e8.js"
+    "static/js/main.dbb11c3b.js"
   ]
 }
