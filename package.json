@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
-
   },
   "keywords": [],
   "author": "",
@@ -25,5 +24,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.10.3",
     "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@appnest/readme": "^1.2.7"
   }
 }
