@@ -11,9 +11,13 @@ import './style.css'
 
 export default function App(){
   const { token, logout } = useContext(UserContext)
+  let windowWidth = window.innerWidth;
+
   return (
     <div className="app">
+      <h3>{windowWidth}</h3>
       { token && <Navbar logout={logout}/>}
+      {console.log(windowWidth)}
       <Routes>
         <Route 
           path="/" 

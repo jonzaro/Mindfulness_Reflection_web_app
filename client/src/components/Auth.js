@@ -40,8 +40,8 @@ const { signup, login, errMsg, resetAuthErr } = useContext(UserContext)
 
     <div className="flex-container">
       <div className="img-container">
-        <img src={picSvg} alt="diary" /><br></br>
-        <a href="https://storyset.com/people" style={{color: "gray"}}>People illustrations by Storyset</a>
+        <img src={picSvg} width="50%"alt="diary" /><br></br>
+        <a href="https://storyset.com/people"  style={{ color: "gray"}}>People illustrations by Storyset</a>
         
         <p className="site-name">Stillness <br></br>Starts <br></br>Here</p>
         </div>

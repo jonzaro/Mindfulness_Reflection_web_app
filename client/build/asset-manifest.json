@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ed772946.css",
-    "main.js": "/static/js/main.dbb11c3b.js",
+    "main.css": "/static/css/main.57f94a2d.css",
+    "main.js": "/static/js/main.dae929cb.js",
     "static/media/landing-water.jpg": "/static/media/landing-water.999ae89a5fded3ae197f.jpg",
     "static/media/profile-empty.jpg": "/static/media/profile-empty.f4345902290d6f7ddb76.jpg",
     "static/media/quotepage.jpg": "/static/media/quotepage.14c9224cc9037ba50d6a.jpg",
@@ -10,11 +10,11 @@
     "static/media/RobotoCondensed-Bold.ttf": "/static/media/RobotoCondensed-Bold.c5fe6deebafaec078e64.ttf",
     "static/media/BaskervvilleRegular.ttf": "/static/media/BaskervvilleRegular.fbfdbd5a668fb566697a.ttf",
     "index.html": "/index.html",
-    "main.ed772946.css.map": "/static/css/main.ed772946.css.map",
-    "main.dbb11c3b.js.map": "/static/js/main.dbb11c3b.js.map"
+    "main.57f94a2d.css.map": "/static/css/main.57f94a2d.css.map",
+    "main.dae929cb.js.map": "/static/js/main.dae929cb.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed772946.css",
-    "static/js/main.dbb11c3b.js"
+    "static/css/main.57f94a2d.css",
+    "static/js/main.dae929cb.js"
   ]
 }
