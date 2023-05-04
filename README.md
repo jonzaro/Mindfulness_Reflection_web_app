@@ -24,7 +24,6 @@
 > The MERN stack application project is designed to encourage users to take a moment of stillness and reflection by providing them with a daily quote to contemplate. The project's user interface is simple and elegant, with a clean design that emphasizes the quote's beauty and encourages users to focus on it.
 Users can log in to the application to receive a daily quote, which is chosen from a carefully curated database of inspiring and thought-provoking quotes. The application also allows users to browse previous quotes and save their favorites, creating a personal collection of quotes that resonate with them.
 
-### 🏠 [Homepage](User)
 
 ### Design mockup!
 <img src="https://user-images.githubusercontent.com/66086245/230159055-97624a79-485f-413f-9bf6-ad91ee954e29.jpeg" />
