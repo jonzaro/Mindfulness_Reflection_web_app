@@ -30,7 +30,7 @@ Users can log in to the application to receive a daily quote, which is chosen fr
 
      https://app.uizard.io/p/be696868
 
-### ✨ [Demo](https://stillnessstartshere.cyclic.app)
+### ✨ [Demo](https://stillnessstartshere.com)
 
 ## Install
 
