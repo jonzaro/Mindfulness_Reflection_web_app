@@ -442,11 +442,11 @@
     font-family: "baskerville";
     font-size: 60px;
   }
-  .login-text {
-    display: block;
+  .auth-container > p   {
     position: relative;
-    top: 35%;
-    left: 12%;
+    display: block;
+    top: 25%;
+    left: 32%;
 }
 
   .reflection-container {

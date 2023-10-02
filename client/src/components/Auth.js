@@ -66,7 +66,7 @@ const { signup, login, errMsg, resetAuthErr } = useContext(UserContext)
               btnText="Login"
               errMsg={errMsg}
             />
-            <p className="login-text" onClick={toggleForm}>click here create an account</p>
+            <p className="login-text" onClick={toggleForm}>click here to create an account</p>
           </>
         }
       </div>
