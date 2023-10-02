@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 export default function Public(){
 
   const navigate = useNavigate()
-
+// this is a comment
   return (
     
     <div className="public">
