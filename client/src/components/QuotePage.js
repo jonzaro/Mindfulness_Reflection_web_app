@@ -39,7 +39,7 @@ const handleShowPrompt = () => {
         <div className="quote-img-container">
             <div className="quote-container">
                 <div className="quote-content">
-                    <h1>Welcome {username}!</h1>
+                    <h2>Welcome {username}!</h2>
                     
                     <div className="quote-directions">
                         Find a quote that resonates with you, select it, ponder it, 
@@ -53,8 +53,8 @@ const handleShowPrompt = () => {
                     <div className="next-quote">        
                         <FontAwesomeIcon  icon={faChevronRight} onClick={nextQuote}/>
                     </div>
-                <button className="pick-quote-button" onClick={handleShowPrompt}>I like this quote</button>
                 </div>
+                <button className="pick-quote-button" onClick={handleShowPrompt}>I like this quote</button>
                 </div>
             </div>
                 <div className="quote-prompt">

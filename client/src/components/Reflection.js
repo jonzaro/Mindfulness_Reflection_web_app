@@ -29,9 +29,7 @@ export default function Reflection(props){
     <div className="reflection-div">
       <div className="reflection-quote" style={randomBackground()}>
         <div className="reflection-overlay">
-          <h1 style={{display: "inline"}}>"</h1>  
-          <h1>{quote}</h1>
-          <h1 style={{display: "inline"}}>"</h1>  
+          <h1 style={{display: "inline"}}>"{quote}"</h1>  
 
         </div>
         <div className="reflection-text">

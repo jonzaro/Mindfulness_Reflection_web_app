@@ -3,6 +3,7 @@ import AuthForm from './AuthForm.js'
 import { UserContext } from '../context/UserProvider.js'
 import picSvg from './Diary.gif'
 
+
 const initInputs = { username: "", password: "" }
 
 export default function Auth(){
@@ -37,16 +38,14 @@ const { signup, login, errMsg, resetAuthErr } = useContext(UserContext)
 
   return (
     <>
-
-    <div className="flex-container">
+    <div className="landing-container">
       <div className="img-container">
+        <p className="site-name">Stillness Starts Here</p>
         <img src={picSvg} width="50%"alt="diary" /><br></br>
         <a href="https://storyset.com/people"  style={{ color: "gray"}}>People illustrations by Storyset</a>
         
-        <p className="site-name">Stillness <br></br>Starts <br></br>Here</p>
-        </div>
+      </div>
       <div className="auth-container">
-
         { !toggle ?
           <>
             <AuthForm 
@@ -56,7 +55,7 @@ const { signup, login, errMsg, resetAuthErr } = useContext(UserContext)
               btnText="Sign up"
               errMsg={errMsg}
             />
-            <p onClick={toggleForm}>Already a member?</p>
+            <p onClick={toggleForm}>click here to login</p>
           </>
         :
           <>
@@ -67,7 +66,7 @@ const { signup, login, errMsg, resetAuthErr } = useContext(UserContext)
               btnText="Login"
               errMsg={errMsg}
             />
-            <p onClick={toggleForm}> Not a member?</p>
+            <p className="login-text" onClick={toggleForm}>click here create an account</p>
           </>
         }
       </div>

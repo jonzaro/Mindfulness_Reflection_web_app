@@ -14,8 +14,8 @@ export default function Navbar(props){
   
   return (
     <div className="navbar">
-      <Link to="/public"><FontAwesomeIcon icon={faHouse} /></Link>
-      <Link to="/profile"><FontAwesomeIcon size="lg" icon={faUser} />
+      <Link to="/public" ><FontAwesomeIcon className="icon-link" icon={faHouse} /></Link>
+      <Link to="/profile" ><FontAwesomeIcon className="icon-link" size="lg" icon={faUser} />
       </Link>
       <button className="logout-btn" onClick={logout}><FontAwesomeIcon icon={faRightFromBracket} />
       <br></br>Logout</button>
