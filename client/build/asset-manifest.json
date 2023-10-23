@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.e276bc29.css",
-    "main.js": "/static/js/main.c651ef32.js",
+    "main.css": "/static/css/main.ea71235f.css",
+    "main.js": "/static/js/main.d065931c.js",
     "static/media/landing-water.jpg": "/static/media/landing-water.999ae89a5fded3ae197f.jpg",
     "static/media/profile-empty.jpg": "/static/media/profile-empty.f4345902290d6f7ddb76.jpg",
     "static/media/quotepage.jpg": "/static/media/quotepage.14c9224cc9037ba50d6a.jpg",
@@ -68,7 +68,7 @@
     "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.e276bc29.css",
-    "static/js/main.c651ef32.js"
+    "static/css/main.ea71235f.css",
+    "static/js/main.d065931c.js"
   ]
 }

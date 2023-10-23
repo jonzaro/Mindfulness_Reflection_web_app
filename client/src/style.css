@@ -685,7 +685,7 @@
  .inspiration-btn-profile {
       position: relative;
       top: 30px;
-      left: 200px;
+      left: 15%;
       height: 40px;
       width: 170px;
       padding:5px;
@@ -1021,6 +1021,530 @@
       height: 70%;
       top: 25%;
       left: 30px;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      padding-right: 15px;
+      margin-bottom: 25px;
+      background: rgb(226, 228, 238);
+      ;
+      
+    }
+  
+    .bookmark {
+      display: block;
+      position: relative;
+      left: 80%;
+      top: 50px;
+    }
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .profile > h1 {
+      margin: 8px;
+      font-size: 2em;
+      text-align: center;
+    }
+    
+    .profile > h3 {
+      margin: 16px 0;
+      text-decoration: underline;
+    }
+    
+    .profile > form {
+      display: flex;
+      flex-direction: column;
+      margin: 16px 0;
+      border: 1px solid #3339;
+      background-color: #aaa9;
+      padding: 16px;
+      border-radius: 5px
+    }
+}
+
+@media only screen and (max-width: 502px) {
+  body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+  }
+
+    
+    
+    .app {
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+    
+    .navbar {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 30px;
+      align-items: center;
+      height: 0px;
+      background-color: transparent;
+    }
+    
+    
+    .logout-btn {
+      background-color: transparent;
+      border: none;
+    }
+    
+    .logout-btn:hover{
+      color:red;
+    }
+   
+    .fa-right-from-bracket:active {
+      color: rgb(251, 9, 9);
+    }
+  
+    
+  
+  
+    .svg-inline--fa  {
+      display: var(--fa-display, inline-block);
+      color: rgb(0, 28, 28);
+      height: 30px;
+    }
+    
+    .public {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+  
+    .public {
+      height: 60vh;
+    }
+  
+    .public-img-container {
+      position: relative;
+      background-image: url("../public/landing-water.jpg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      height: 70vh;
+      margin-left: 30vw;
+      width: 65%;
+      margin-top: 120px;
+      background-color: rgb(255, 255, 255);
+    }
+  
+    /* .public-right-side {
+      display: flex;
+      height: 100%;
+      width: 40%;
+      padding: 50px;
+      background-color: white;
+      flex-direction: column;
+    } */
+    
+    .public-right-content {
+      position: relative;
+      height: 70%;
+      width: 30%;
+      /* margin: auto; */
+      top: -10%;
+      padding: 5px;
+      left: -35%;
+      font-family: "myFontReg";
+      font-size: x-small;
+    }
+  
+    
+    .inspiration-btn {
+      position: relative;
+      top: 30px;
+      left: -5%;
+      height: 7%;
+      width: 100%;
+      font-size: 8px;
+      padding:5px;
+      margin-left: 5px;
+      border-radius: 20px;
+      color: white;
+      background: black;
+    }
+
+    .profile-btn {
+      position: relative;
+      top: 12%;
+      /* left: -10%; */
+      height: 7%;
+      width: 100%;
+      padding:5px;
+      margin-bottom: 100px;
+      margin-left: 7px;
+      font-size:8px;
+      border-radius: 10px;
+      color: white;
+      background: #487e96;
+    }
+    
+    .inspiration-profile-btn {
+      position: relative;
+      top: 30px;
+      left: 100px;
+      height: 15vh;
+      width: 20%;
+      padding:5px;
+      font-size: medium;
+      border-radius: 20px;
+      color: white;
+      background: black;
+    }
+  
+ /* .inspiration-btn-profile {
+      position: relative;
+      top: 30px;
+      height: 40px;
+      width: 170px;
+      right: 20vw;
+      padding:5px;
+      font-size: medium;
+      border-radius: 20px;
+      color: white;
+      background: black;
+    } */
+   
+    
+    .profile {
+      font-family: "myFontReg";
+    }
+  
+    
+    .quote-img-container {
+      position: relative;
+      top: 50px;
+      width: 85%;
+      margin: auto;
+      height: 470px;
+      opacity: 0.9;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      padding: 20px 20px 20px 20px;
+      background-image: url("../public/quotepage.jpg");
+      border-radius: 20px;
+    }
+    
+    .quote-container {
+      display: block;
+      overflow: hidden;
+      background-color:rgba(165, 165, 165, 0.2);
+      width: 90%;
+      height: 100%;
+      padding: 20px;
+      padding-right: 50px;
+      margin: auto;
+      border-radius: 20px;
+    }
+    
+    .quote {
+      position: relative;
+      top: -100px;
+      font-size: medium;
+    }
+  
+    .quote-content {
+      opacity: .85;
+      font-size: 20px;
+      margin-top: 0px;
+      color: rgb(255, 255, 255);
+    }
+
+    .quote-content > h1 {
+      font-size: 35px;
+    }
+    
+    .quote-directions {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      left: 20%;
+      top: -40px;
+      padding:20px;
+      font-size: 14px;
+      color:rgb(202, 251, 222)
+    }
+  
+    .quote-prompt {
+      position: relative;
+      left: 13%;
+      bottom: -100px;
+      width: 500px;
+      height: 300px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: rgb(255, 255, 255);
+    }
+    
+    .pick-quote-button {
+      position: relative;
+      left: 200px;
+      top: -90px;
+      height: 40px;
+      width: 150px;
+      padding:5px;
+      border-radius: 20px;
+      font-size: 14px;
+      color: white;
+      background: rgb(31, 31, 31);
+    }
+    
+    .next-quote {
+      position: relative;
+      top: -180px;
+      left: 100%;
+      opacity: 1;  
+    }
+  
+    .svg-inline--fa.fa-chevron-right {
+      height: 40px;
+      color: rgb(189, 189, 189);
+    }
+    
+    .blinking-text {
+      position: relative;
+      top: 0px;
+      font-family: "myFontReg";
+      font-size: 20px;
+      letter-spacing: 2px;
+      color: rgb(30, 99, 65);
+      animation: blinker 3s linear infinite;
+    }
+    
+    @keyframes blinker {
+      50% {
+        opacity: 0;
+      }
+    }
+  
+  
+  
+      .div-cards {
+        width: 80%;
+        height: 100%;
+      }
+  
+  
+    .profile-empty {
+      position: relative;
+      display: inline-block;
+      background-image: url("../public/profile-empty.jpg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      height: 100vh;
+      width: 100%;
+      padding-top: 50px;
+      background-color: rgb(255, 255, 255);
+    }
+  
+    .profile-empty-content {
+      position: relative;
+      top: 200px;
+      left: 60px;
+      width: 80%;
+      height: 30%;
+      background-color: #c4d1d3;
+      font-family: "myFontReg";
+      font-size: large;
+      letter-spacing: 2px;
+      opacity: 0.8;
+      padding: 50px;
+      border-radius: 15px;
+    }
+  
+    .img-container {
+      position: relative;
+      background-color: #ffffff;
+      height: 50vh;
+      width: 70%;
+      left: 70px;
+      top: 3vh;
+      padding-top: 50px;
+    }
+    
+    .site-name {
+      position: relative;
+      top: -500px;
+      left: 30%;
+      font-family: "baskerville";
+      font-size: 40px;
+      letter-spacing: 8px;
+      color: rgb(120, 130, 166);
+    }
+  
+    .auth-container {
+      align-items: center;
+      position: relative;
+      display: inline-block;
+      background: white;
+      border-radius: 15px;
+      padding: 15px;
+      top: -290px;
+      left: 48%;
+      height: 400px;
+      width: 55%;
+    }
+    
+    .auth-container > h1 {
+      font-size: 2em;
+      margin: 24px;
+    }
+    
+    .auth-container > p {
+      
+      text-decoration: none;
+      top: 5vh;
+      left: 5vw;
+    }
+    
+  
+    .auth-container > form > h2 {
+      font-size: 1.5em;
+      padding-bottom: 19px;
+    }
+    .auth-container > form {
+      padding: 30px;
+      border-radius: 5px;
+      background-color:rgb(255, 255, 255);
+      width: 100%;
+      height: 70%;
+      display: flex;
+      border: none;
+      flex-direction: column;
+    }
+    
+    .auth-container > form > input {
+      margin: 6px -10px;
+      padding: 8px;
+      margin-bottom: 16px;
+      width: 100%;
+      border: none;
+      box-shadow: 1px 1px 10px #7da1d3;
+      border-radius: 11px;
+    }
+    
+    .auth-container > form > button {
+      align-self: center;
+      padding: 8px;
+      height: 55px;
+      width: 80%;
+      font-size: small;
+      color: white;
+      background-color: #3164F4;
+      border-radius: 10px;
+    }
+    
+    .form-style {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top:  60px;
+      background-color: rgba(214, 214, 214, 0.5);
+      padding: 16px;
+      border-radius: 15px
+    }
+  
+    .form-style > input {
+      width: 97%;
+      padding: 15px;
+      font-size: large;
+      border-radius: 10px;
+    }
+  
+    .form-style > button {
+      width: 47%;
+      align-self: end;
+      font-size: small;
+    }
+    
+    form > input {
+      height: 100px;
+      width: 500px;
+      margin: 16px 8px;
+      padding: 8px;
+      border: none;
+      box-shadow: 1px 1px 10px #c0c0c0;
+      border-radius: 3px;
+    }
+  
+    form > button {
+      padding:5px;
+      width: 240px;
+      border-radius: 8px;
+      font-size: 16px;
+      color: white;
+      background: rgb(41, 60, 46);
+    }
+    
+    .profile-container {
+      display: block;
+      margin-top: 30px;
+      width: 80%;
+    }
+  
+    .profile-text {
+      font-family: "baskerville";
+      font-size: 30px;
+      
+    }
+  
+    .reflection-container {
+      background: rgb(226, 228, 238);
+      border-radius: 15px;
+      position: relative;
+      overflow: scroll;
+      padding: 25px;
+      margin-top: 100px;
+      left: -7%;
+      height: 80%;
+      width: 75%;
+      
+    }
+    .reflection-overlay > h1 {
+      font-size: 20px;
+    }
+   
+    .reflection-quote {
+      display: contents; 
+      width: 30%;
+      height: 20%;
+      top: 30px;
+      background-size: 50%;
+      margin-bottom:15px;
+      padding-right: 10px;
+      padding: 10px;
+      border-radius: 15px;;
+      background: rgb(226, 228, 238);
+    }
+
+    .reflection-overlay {
+      display: block;
+      overflow: hidden;
+      background-color:rgba(215, 206, 206, 0.4);
+      width: 95%;
+      height: 100%;
+      padding: 20px;
+      margin: auto;
+      border-radius: 20px;
+    }
+    
+    .reflection-text {
+    
+      position: relative;
+      width: 70vw;
+      height: 70%;
+      top: 25%;
+      left: 0%;
       word-wrap: break-word;
       overflow-wrap: break-word;
       padding-right: 15px;
